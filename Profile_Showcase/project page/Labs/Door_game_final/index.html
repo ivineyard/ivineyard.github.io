@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Door Game — Avoid the Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Door Game — Avoid the Bot!</h1>
+
+
+        <div id="instructions" class="panel">
+            <strong>How to play</strong>
+            <ol>
+                <li>Hiding behind one of these doors is a Bot.</li>
+                <li>Your mission is to open all of the doors without running into the Bot.</li>
+                <li>If you manage to avoid the Bot until the very last door, you win!</li>
+                <li>See if you can score a winning streak!</li>
+            </ol>
+        </div>
+
+
+        <div class="panel">
+            <label>
+                Theme:
+                <button id="toggle-theme">Toggle Dark/Light</button>
+            </label>
+            <br>
+            <label>Font Size: <input id="font-slider" type="range" min="14" max="22" value="16"></label>
+        </div>
+
+
+        <div id="scoreboard" class="panel">
+            <p id="current-streak">Current streak: 0</p>
+            <p id="best-streak">Highest streak (this session): 0</p>
+        </div>
+
+
+        <div id="game" class="panel">
+            <div class="doors" id="doors"></div>
+
+
+            <div class="controls">
+                <label>Difficulty:
+                    <select id="difficulty">
+                        <option value="easy">Easy (1/3 bots)</option>
+                        <option value="medium">Medium (2/3 bots)</option>
+                        <option value="hard">Hard (3/4 bots)</option>
+                    </select>
+                </label>
+                <button id="start-button" type="button">Start New Round</button>
+                <div id="message" aria-live="polite"></div>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
